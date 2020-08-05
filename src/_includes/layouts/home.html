@@ -4,13 +4,16 @@
 <article>
   <div class="parent">
     <header>
-    {% include "partials/logo.svg" %}
+    {# {% include "partials/logo.svg" %} #}
     </header>
     <div class="side-nav">
         <p>Selected Works</p>
         <nav class="projects">
-                <li> <a href="/briefly">As I Was Moving Along, I Saw Brief Glimpses Of Beauty</a></li>
-                <li><a href="/">The Real People Went Away</a></li>
+            {% for item in navigation.items %}
+                <li>
+                    <a href="{{ item.url }}"> {{ item.text }}</a>
+                </li>
+            {% endfor %}
         </nav>
       <a class="instagram" href="https://www.instagram.com/__yesh__/">Instagram</a>
       <a class="twitter" href="#">Twitter</a>
