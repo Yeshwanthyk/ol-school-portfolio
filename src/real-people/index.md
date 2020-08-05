@@ -1,6 +1,6 @@
 ---
 title: 'Real people went away'
-layout: 'layouts/project.html'
+layout: 'layouts/home.html'
 ---
 
 real people

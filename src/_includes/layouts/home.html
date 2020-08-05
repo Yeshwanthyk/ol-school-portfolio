@@ -1,23 +1,10 @@
 {% extends "layouts/base.html" %} 
 
 {% block content %}
-<article>
   <div class="parent">
     <header>
     {# {% include "partials/logo.svg" %} #}
     </header>
-    <div class="side-nav">
-        <p>Selected Works</p>
-        <nav class="projects">
-            {% for item in navigation.items %}
-                <li>
-                    <a href="{{ item.url }}"> {{ item.text }}</a>
-                </li>
-            {% endfor %}
-        </nav>
-      <a class="instagram" href="https://www.instagram.com/__yesh__/">Instagram</a>
-      <a class="twitter" href="#">Twitter</a>
-    </div>
+    {% include "partials/sidenav.html" %}
   {{ content | safe }}
-</article>
 {% endblock %}

@@ -1,1 +1,13 @@
-{% extends "layouts/home.html" %} 
+{% extends "layouts/base.html" %} 
+
+{% block content %}
+    {% include "partials/sidenav.html" %}
+    
+    {% for image in collections.briefly%}
+        <figure><img src="{{image}}" alt="working"></figure>
+    {% endfor %}
+
+    {% for image in collections.realPeople%}
+        <figure><img src="{{image}}" alt="working"></figure>
+    {% endfor %}
+{% endblock %}
