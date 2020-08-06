@@ -1,0 +1,14 @@
+:root {
+  --metric-sidebar-width: 16rem;
+  --metric-gutter: 1.5rem;
+  --metric-mini-gutter: 0.8rem;
+  --metric-gutter-neg: -1.5rem;
+  --metric-mini-gutter-neg: -0.8rem;
+  --color-dark: #252525;
+  --color-light: #fefefe;
+  --color-mid: #999999;
+  --color-text: var(--color-dark);
+  --color-bg: var(--color-light);
+  --color-text-rev: var(--color-light);
+  --color-bg-rev: var(--color-dark);
+}
