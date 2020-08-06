@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  height: 100vh;
+}
+
+img {
+  padding: 0.2rem;
+  object-fit: cover;
+  height: 65vh;
+  max-width: 100vh;
+}
