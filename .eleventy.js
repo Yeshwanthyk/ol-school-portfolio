@@ -1,14 +1,15 @@
 // Import fast-glob package
 const fg = require('fast-glob');
 
-const brieflyImages = fg.sync(['**/briefly-images/*', '!**/dist']);
-const realPeopleImages = fg.sync(['**/real-people-images/*', '!**/dist']);
-console.log(realPeopleImages);
+const brieflyImages = fg.sync([
+  '**/images/as-i-was-moving-along/*',
+  '!**/dist',
+]);
+const realPeopleImages = fg.sync(['**/images/real-people/*', '!**/dist']);
 
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
-  config.addPassthroughCopy('./src/briefly-images/');
-  config.addPassthroughCopy('./src/real-people-images/');
+  config.addPassthroughCopy('./src/images/');
 
   config.addCollection('briefly', function (collection) {
     const sortedImages = brieflyImages.map((image) => {
