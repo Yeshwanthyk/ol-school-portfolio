@@ -2,12 +2,14 @@
 
 {% block content %}
     {% include "partials/sidenav.html" %}
-    
-    {% for image in collections.briefly%}
-        <figure><img src="{{image}}" alt="working"></figure>
-    {% endfor %}
 
-    {% for image in collections.realPeople%}
-        <figure><img src="{{image}}" alt="working"></figure>
-    {% endfor %}
+    {% if page.fileSlug == 'real-people' %}
+        {% for image in collections.realPeople%}
+            <figure><img src="{{image}}" alt="working"></figure>
+        {% endfor %}
+    {% elif page.fileSlug == 'as-i-was-moving-along' %}
+        {% for image in collections.asIWasMovingAlong%}
+            <figure><img src="{{image}}" alt="working"></figure>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

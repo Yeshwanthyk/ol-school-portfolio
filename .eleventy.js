@@ -6,7 +6,7 @@ module.exports = (config) => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/images/');
 
-  config.addCollection('briefly', function (collection) {
+  config.addCollection('asIWasMovingAlong', function (collection) {
     return projectImages.getPaths('as-i-was-moving-along');
   });
 
