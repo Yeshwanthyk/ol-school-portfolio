@@ -1,12 +1,14 @@
-<div class="side-nav">
+<aside class="side-nav">
     <p>Selected Works</p>
     <nav class="projects">
+        <ul class="nav__list">
         {% for item in navigation.items %}
             <li>
                 <a href="{{ item.url }}"> {{ item.text }}</a>
             </li>
         {% endfor %}
+        </ul>
     </nav>
     <a class="instagram" href="https://www.instagram.com/__yesh__/">Instagram</a>
     <a class="twitter" href="#">Twitter</a>
-</div>
+</aside>
