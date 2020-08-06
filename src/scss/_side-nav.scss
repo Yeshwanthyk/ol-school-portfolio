@@ -30,6 +30,10 @@ aside {
     padding-bottom: var(--metric-mini-gutter);
   }
 
+  .nav__list {
+    padding-left: var(--metric-mini-gutter);
+  }
+
   li {
     padding-bottom: var(--metric-mini-gutter);
     list-style: none;

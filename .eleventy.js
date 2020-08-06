@@ -1,6 +1,7 @@
 // Import fast-glob package
 const fg = require('fast-glob');
 const projectImages = require('./src/_data/projectImages');
+const { naturalSort } = require('./src/utils/natural-sort.js');
 
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
@@ -11,7 +12,8 @@ module.exports = (config) => {
   });
 
   config.addCollection('asIWasMovingAlong', function (collection) {
-    return projectImages.getPaths('as-i-was-moving-along');
+    let paths = projectImages.getPaths('as-i-was-moving-along');
+    return paths.sort((a, b) => naturalSort(a, b));
   });
 
   config.addCollection('realPeople', function (collection) {
