@@ -4,9 +4,6 @@ const projectImages = require('./src/_data/projectImages');
 const { naturalSort } = require('./src/utils/natural-sort.js');
 
 module.exports = (config) => {
-  // Set directories to pass through to the dist folder
-  config.addPassthroughCopy('./src/images/');
-
   config.addCollection('home', function (collection) {
     return projectImages.getPaths('home');
   });
