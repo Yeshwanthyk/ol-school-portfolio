@@ -17,7 +17,8 @@ module.exports = (config) => {
   });
 
   config.addCollection('realPeople', function (collection) {
-    return projectImages.getPaths('real-people');
+    let paths = projectImages.getPaths('real-people');
+    return paths.sort((a, b) => naturalSort(a, b));
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
