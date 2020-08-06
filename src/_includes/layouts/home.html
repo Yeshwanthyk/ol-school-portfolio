@@ -1,10 +1,13 @@
 {% extends "layouts/base.html" %} 
 
 {% block content %}
-  <div class="parent">
-    <header>
-    {# {% include "partials/logo.svg" %} #}
-    </header>
+  <div class="container">
+    {% include "partials/logo.html" %}
     {% include "partials/sidenav.html" %}
+    <main>
+        {% for image in collections.home%}
+            <figure><img src="{{image}}" alt=""></figure>
+        {% endfor %}
+    </main>
   {{ content | safe }}
 {% endblock %}
