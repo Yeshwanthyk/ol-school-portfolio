@@ -26,20 +26,16 @@ aside {
 
   p {
     font-size: 1rem;
-    font-family: var(--font), 'Verdana', 'sans-serif';
+    font-family: 'Lato', 'sans-serif';
     font-weight: var(--font-heavy);
     font-size: 1.2rem;
     padding-bottom: var(--metric-mini-gutter);
   }
 
-  // .nav__list {
-  //   padding-left: var(--metric-mini-gutter);
-  // }
-
   li {
     padding-bottom: var(--metric-mini-gutter);
     list-style: none;
-    font-family: var(--font), 'Verdana', 'sans-serif';
+    font-family: 'Lato', 'sans-serif';
     font-weight: var(--font-light);
     font-size: 1rem;
 
@@ -66,7 +62,7 @@ aside {
     text-decoration: none;
     font-size: 1rem;
     padding-bottom: 0.8rem;
-    font-family: var(--font), 'Verdana', 'sans-serif';
+    font-family: 'Lato', 'sans-serif';
     font-weight: var(--font-light);
     list-style: none;
   }

@@ -15,3 +15,21 @@
   --font-light: 300;
   --font-heavy: 700;
 }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Lato-300-latin2/fonts/.woff2') format('woff2'),
+    url('/fonts/Lato-300-latin2.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Lato-700-latin4/fonts/.woff2') format('woff2'),
+    url('/fonts/Lato-300-latin2.woff') format('woff');
+}
