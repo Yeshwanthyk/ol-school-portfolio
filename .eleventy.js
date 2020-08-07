@@ -6,7 +6,7 @@ module.exports = (config) => {
   config.addPassthroughCopy('./src/assets');
 
   config.addCollection('home', function (collection) {
-    return projectImages.getPaths('home', 3);
+    return projectImages.getPaths('home', 2);
   });
 
   config.addCollection('asIWasMovingAlong', function (collection) {
