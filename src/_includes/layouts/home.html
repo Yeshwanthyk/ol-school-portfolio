@@ -6,7 +6,7 @@
     {% include "partials/sidenav.html" %}
     <main>
         {% for image in collections.home%}
-            <figure><img src="{{image}}" alt=""></figure>
+            <figure>{{image | safe}}</figure>
         {% endfor %}
     </main>
   {{ content | safe }}

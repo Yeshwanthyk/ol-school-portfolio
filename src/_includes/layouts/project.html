@@ -8,11 +8,11 @@
     <main>
         {% if page.fileSlug == 'real-people' %}
             {% for image in collections.realPeople%}
-                <figure><img src="{{image}}" alt="images for project real people"></figure>
+                <figure>{{ image | safe }}</figure>
             {% endfor %}
         {% elif page.fileSlug == 'as-i-was-moving-along' %}
             {% for image in collections.asIWasMovingAlong%}
-                <figure><img src="{{image}}" alt="images for project As I was moving along"></figure>
+                <figure>{{ image | safe }}</figure>
             {% endfor %}
         {% endif %}
     </main>

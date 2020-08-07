@@ -1,24 +1,20 @@
 // Import fast-glob package
-const fg = require('fast-glob');
 const projectImages = require('./src/_data/projectImages');
-const { naturalSort } = require('./src/utils/natural-sort.js');
 
 module.exports = (config) => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/assets');
 
   config.addCollection('home', function (collection) {
-    return projectImages.getPaths('home');
+    return projectImages.getPaths('home', 3);
   });
 
   config.addCollection('asIWasMovingAlong', function (collection) {
-    let paths = projectImages.getPaths('as-i-was-moving-along');
-    return paths.sort((a, b) => naturalSort(a, b));
+    return projectImages.getPaths('as-i-was-moving-along', 21);
   });
 
   config.addCollection('realPeople', function (collection) {
-    let paths = projectImages.getPaths('real-people');
-    return paths.sort((a, b) => naturalSort(a, b));
+    return projectImages.getPaths('real-people', 4);
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
