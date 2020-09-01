@@ -27,7 +27,7 @@ module.exports = {
         })
         .join(', ');
       finalPaths.push(
-        `<img loading="lazy" src="${src}" srcset="${srcset}" sizes="(max-width: 400px) 320px, 480px" alt="images for project ${projectName}">`
+        `<img src="${src}" srcset="${srcset}" sizes="(max-width: 400px) 320px, 480px" alt="images for project ${projectName}">`
       );
     });
 
