@@ -1,19 +1,15 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %} {% block content %}
+<div class="container">
+  {% include "partials/logo.html" %} {% include "partials/sidenav.html" %}
 
-{% block content %}
-    <div class="container">
-    {% include "partials/logo.html" %}
-    {% include "partials/sidenav.html" %}
-
-    <main>
-        {% if page.fileSlug == 'real-people' %}
-            {% for image in collections.realPeople%}
-                <figure>{{ image | safe }}</figure>
-            {% endfor %}
-        {% elif page.fileSlug == 'as-i-was-moving-along' %}
-            {% for image in collections.asIWasMovingAlong%}
-                <figure>{{ image | safe }}</figure>
-            {% endfor %}
-        {% endif %}
-    </main>
-{% endblock %}
+  <main>
+    {% if page.fileSlug == 'real-people' %} {% for image in
+    collections.realPeople%}
+    <figure>{{ image | safe }}</figure>
+    {% endfor %} {% elif page.fileSlug == 'as-i-was-moving-along' %} {% for
+    image in collections.asIWasMovingAlong%}
+    <figure>{{ image | safe }}</figure>
+    {% endfor %} {% endif %}
+  </main>
+  {% endblock %}
+</div>

@@ -1,13 +1,10 @@
-{% extends "layouts/base.html" %} 
-
-{% block content %}
-  <div class="container">
-    {% include "partials/logo.html" %}
-    {% include "partials/sidenav.html" %}
-    <main>
-        {% for image in collections.home%}
-            <figure>{{image | safe}}</figure>
-        {% endfor %}
-    </main>
-  {{ content | safe }}
-{% endblock %}
+{% extends "layouts/base.html" %} {% block content %}
+<div class="container">
+  {% include "partials/logo.html" %} {% include "partials/sidenav.html" %}
+  <main>
+    {% for image in collections.home%}
+    <figure>{{image | safe}}</figure>
+    {% endfor %}
+  </main>
+  {{ content | safe }} {% endblock %}
+</div>
